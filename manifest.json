@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "SharePoint KB Exporter",
+  "version": "1.0.0",
+  "description": "Automatický export SharePoint stránok, FAQ zoznamov a dokumentov pre Copilot.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SharePoint KB Exporter"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
