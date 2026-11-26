@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      width: 310px;
+      padding: 14px;
+      margin: 0;
+      background: #1e1e24;
+      color: #f4f4f6;
+    }
+    h3 {
+      margin: 0 0 10px 0;
+      font-size: 15px;
+      color: #4cc2ff;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    .row {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #b8b8c2;
+    }
+    input[type="number"] {
+      width: 65px;
+      padding: 3px 6px;
+      background: #2b2b34;
+      border: 1px solid #444;
+      color: #fff;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      margin-top: 14px;
+      padding: 9px;
+      background: #0078d4;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1084e0;
+    }
+    .note {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #9a9aa6;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+  <h3>SharePoint KB Exporter</h3>
+  <label><input type="checkbox" id="optPages" checked> Webové stránky (.aspx → čisté .html)</label>
+  <label><input type="checkbox" id="optDocs" checked> Dokumenty a prezentácie (.pptx, .docx, .pdf)</label>
+  <label><input type="checkbox" id="optLists" checked> Zoznamy a FAQ (.csv pre Excel/Copilot)</label>
+
+  <div class="row">
+    Pauza medzi súbormi: <input type="number" id="optDelay" value="350" min="100" max="5000"> ms
+  </div>
+
+  <button id="startBtn">Spustiť kompletný export</button>
+  <div class="note">Otvor ľubovoľnú stránku danej SharePoint lokality a spusti export. Priebeh uvidíš priamo v rohu stránky.</div>
+  <script src="popup.js"></script>
+</body>
+</html>
